@@ -1,3 +1,5 @@
+module SplitWith where
+
 splitWith :: (a -> Bool) -> [a] -> [[a]]
 splitWith p xs = shift p [] [] xs
 

@@ -1,3 +1,5 @@
+module Palindrome where
+
 isOdd :: Int -> Bool
 
 isOdd n

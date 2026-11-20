@@ -1,3 +1,7 @@
+module DigitOps where
+
+import Data.Char (ord, chr)
+
 isLower :: Char -> Bool
 isLower x = 'a' <= x && x <= 'z'
 
@@ -20,6 +24,7 @@ toLower :: Char -> Char
 toLower c | isUpper c = chr (ord c - ord 'A' + ord 'a')
           | otherwise = c
 
-		  toUpper :: Char -> Char
+
+toUpper :: Char -> Char
 toUpper c | isLower c = chr (ord c - ord 'a' + ord 'A')
           | otherwise = c

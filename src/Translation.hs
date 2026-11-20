@@ -1,3 +1,5 @@
+module Translation where
+
 import Data.Char
 
 data EqDict a = EqD (a -> a -> Bool)

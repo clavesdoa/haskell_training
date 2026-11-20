@@ -24,11 +24,10 @@ instance Functor MyIO where
   fmap = liftM
 
 instance Applicative MyIO where
-  pure  = return
+  pure x  =  MyIO (\inp -> (x, inp, ""))
   (<*>) = ap
 
 instance Monad MyIO where
-  return x  =  MyIO (\inp -> (x, inp, ""))
   m >>= k   =  MyIO (\inp ->
                  let (x, rem1, out1) = apply m inp in
                  let (y, rem2, out2) = apply (k x) rem1 in

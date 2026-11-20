@@ -1,3 +1,5 @@
+module Edinburgh where
+
 myEnumFromTo :: Int -> Int -> [Int]
 
 myEnumFromTo m n | m > n = []

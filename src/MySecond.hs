@@ -1,3 +1,5 @@
+module MySecond where
+
 {-- snippet mySecond --}
 mySecond :: [a] -> a
 

@@ -1,3 +1,5 @@
+module List where
+
 {-- snippet List --}
 data List a = Cons a (List a)
             | Nil

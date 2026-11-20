@@ -1,3 +1,5 @@
+module ExpressionTrees where
+
 import Data.List
 
 data Exp = Lit Int

@@ -1,3 +1,5 @@
+module MyLength where
+
 myLength :: [a] -> Int
 
 myLength [] = 0

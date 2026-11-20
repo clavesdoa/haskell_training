@@ -22,3 +22,25 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+# Build output
+dist-newstyle/
+.hie/
+*.tix
+*.dump-*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+TAGS
+tags
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment
+.envrc
+.direnv/

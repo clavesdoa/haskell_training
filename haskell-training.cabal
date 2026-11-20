@@ -1,0 +1,60 @@
+cabal-version:      3.0
+name:               haskell-training
+version:            0.1.0.0
+synopsis:           Exercises from learning Haskell
+author:             Claves do Amaral
+maintainer:         claves.doamaral@gmail.com
+build-type:         Simple
+extra-doc-files:    README.md
+data-files:         data/*.txt
+
+common shared
+    default-language: Haskell2010
+    build-depends:    base >=4.14 && <5
+
+library
+    import:           shared
+    hs-source-dirs:   src
+    exposed-modules:
+        DigitOps
+        Edinburgh
+        ExpressionTrees
+        List
+        MyEcho
+        MyIO
+        MyLength
+        MySecond
+        Palindrome
+        Parser
+        SafeListFuns
+        SplitWith
+        SquareSums
+        Sublists
+        Translation
+        Tree
+
+-- Upper-cases a file:  cabal run interact-with -- data/hello-in.txt out.txt
+executable interact-with
+    import:           shared
+    hs-source-dirs:   app
+    main-is:          InteractWith.hs
+
+-- Counts words on stdin:  cabal run wc < data/quux.txt
+executable wc
+    import:           shared
+    hs-source-dirs:   app
+    main-is:          WC.hs
+
+-- Echoes stdin in upper case using the home-made IO monad
+executable my-echo
+    import:           shared
+    hs-source-dirs:   app
+    main-is:          Echo.hs
+    build-depends:    haskell-training
+
+test-suite spec
+    import:           shared
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    build-depends:    haskell-training

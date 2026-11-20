@@ -1,3 +1,5 @@
+module SafeListFuns where
+
 safeHead :: [a] -> Maybe a
 safeHead (x:_) = Just x
 safeHead [] = Nothing

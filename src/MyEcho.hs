@@ -30,6 +30,3 @@ myEcho =  do {
               myEcho
             }
           }
-
-main :: IO ()
-main =  convert myEcho

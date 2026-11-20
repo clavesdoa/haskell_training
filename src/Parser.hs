@@ -34,11 +34,10 @@ instance Functor Parser where
   fmap = liftM
 
 instance Applicative Parser where
-  pure  = return
+  pure x  =  Parser (\s -> [(x,s)])
   (<*>) = ap
 
 instance Monad Parser where
-  return x  =  Parser (\s -> [(x,s)])
   m >>= k   =  Parser (\s ->
                  [ (y, u) |
                    (x, t) <- apply m s,
